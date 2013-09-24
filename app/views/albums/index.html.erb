@@ -1,0 +1,12 @@
+<ul class='albums'>
+	<% @albums.each do |album| %>
+		<h1><%= link_to album.title, album_path(album), method: 'get', class: "title" %></h1>
+		<p>Genre: <%= album.genre %><br>
+			Songs: 
+			<% album.songs.each do |song| %>
+				<%= song.title %>, 
+			<% end %>
+			<br>Artist: <%= album.artist.name %>
+		</p>
+	<% end %>
+</ul>

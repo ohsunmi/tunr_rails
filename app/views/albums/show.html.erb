@@ -1,0 +1,11 @@
+<%= link_to @album.title, album_path(@album), method: 'get', class: "title" %>
+<p>Genre: <%= @album.genre %></p>
+<p>Songs: </p>
+<% @album.songs.each do |song| %>
+	<p><%= song.title %>
+		<br><%= link_to 'view song', song_path(song), method: 'get' %>
+	</p>
+<% end %>
+
+<%= button_to 'Delete this album', album_path(@album), method: 'delete' %>
+<%= button_to 'Edit this album', edit_album_path(@album), method: 'get' %>

@@ -1,0 +1,11 @@
+<%= link_to @artist.name, artist_path(@artist), method: 'get', class: "title" %>
+
+<p>Bio: <%= @artist.bio %></p>
+<% @artist.albums.each do |album| %>
+	<p>Albums: <%= album.title %>
+		<br><%= link_to 'view album', album_path(album), method: 'get' %>
+	</p>
+<% end %>
+
+<%= button_to 'Delete this artist', artist_path(@artist), method: 'delete' %>
+<%= button_to 'Edit this artist', edit_artist_path(@artist), method: 'get' %>

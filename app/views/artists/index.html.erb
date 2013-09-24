@@ -1,0 +1,11 @@
+<ul class='artists'>
+	<% @artists.each do |artist| %>
+		<li>
+			<h1><%= artist.name %></h1>
+			<p>
+				<%= artist.bio %>
+			</p>
+			<h1><%= link_to 'view artist', artist_path(artist), method: 'get', class: "title" %></h1>
+		</li>
+	<% end %>
+</ul>

@@ -1,0 +1,6 @@
+<%= link_to @song.title, song_path(@song), method: 'get', class: "title" %>
+<p>Album: <%= @song.album.title %></p>
+<p>Artist: <%= @song.artist.name %></p>
+
+<%= button_to 'Delete this song', song_path(@song), method: 'delete' %>
+<%= button_to 'Edit this song', edit_song_path(@song), method: 'get' %>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TunrRails</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<div id="nav">
+		<div class="columns">
+			<%= button_to 'All Artists', artists_path, method: 'get' %>
+			<%= button_to 'Add new artist', new_artist_path, method: 'get' %>
+		</div><!-- .columns -->
+
+		<div class="columns">
+			<%= button_to 'All albums', albums_path, method: 'get' %>
+			<%= button_to 'Add album', new_album_path, method: 'get' %>
+		</div><!-- .columns -->
+
+		<div class="columns">
+			<%= button_to 'All songs', songs_path, method: 'get' %>
+			<%= button_to 'Add song', new_song_path, method: 'get' %>
+		</div><!-- .columns -->
+	</div><!-- #nav -->
+
+	<div id="yield">
+		<%= yield %>
+	</div><!-- #yield -->
+
+</body>
+</html>
