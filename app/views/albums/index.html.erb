@@ -1,3 +1,5 @@
+sendgrid
+
 <ul class='albums'>
 	<% @albums.each do |album| %>
 		<h1><%= link_to album.title, album_path(album), method: 'get', class: "title" %></h1>
